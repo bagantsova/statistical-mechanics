@@ -1,5 +1,8 @@
 # statistical-mechanics
 
+> **Molecular dynamics: MIPT coursework, March–April 2023, reorganised 2026.**
+> **Ising model: written 2026.** Full detail under [Provenance](#provenance).
+
 Two simulations of interacting many-body systems in C++20, each checked against
 something outside itself rather than inspected by eye:
 
