@@ -9,9 +9,10 @@ something outside itself rather than inspected by eye:
 Both are parallelised with OpenMP, both take their parameters from the command
 line, and both write CSV that the included scripts turn into the figures below.
 
-Originally written as coursework at MIPT (Applied Mathematics and Physics) and
-rebuilt here with a portable build, a corrected integrator, and the
-verification made explicit.
+The molecular dynamics engine began as coursework at MIPT (Applied Mathematics
+and Physics) in spring 2023 and is reorganised here with a portable build, a
+corrected integrator, and the verification made explicit. The Ising model is
+new — see [Provenance](#provenance).
 
 ## Build
 
@@ -106,6 +107,30 @@ toward a step as `L` grows, and the specific heat and susceptibility peaks grow
 with `L`. Those peaks sit slightly above `T_c` rather than on it, which is the
 expected finite-size shift — they approach `T_c` from above as `L` grows, while
 the Binder crossing does not move.
+
+
+## Provenance
+
+| Component | Origin | Original dates |
+|---|---|---|
+| `md-lennard-jones/` | [`bagantsova/supercomputers`](https://github.com/bagantsova/supercomputers) (archived), `files/` | 1 March – 19 April 2023 |
+| `ising/` | written for this repository | September 2026 |
+
+The MD code is the `supercomputers` repository from the MIPT supercomputing
+course, reorganised rather than rewritten from nothing: the structure, the FCC
+initialisation, the minimum-image convention and the LAMMPS dump format are all
+from the 2023 original, which remains public and archived so its commit history
+is verifiable. What changed is listed under
+[What changed in the rebuild](#what-changed-in-the-rebuild) — the integrator,
+the force expression, the cutoff shift, and portability.
+
+The Ising model is **not** recovered older work and is not presented as such. A
+2022 lattice simulation of mine was sometimes remembered as an Ising model, but
+it is a lattice gas — random walkers coloured by occupancy, with no spins and no
+Metropolis acceptance — and it lives in
+[`sfml-simulations`](https://github.com/bagantsova/sfml-simulations) under its
+correct name. This implementation was written fresh to sit alongside the MD
+engine as a second system with an exact result to check against.
 
 ## Layout
 
