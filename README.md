@@ -1,7 +1,7 @@
 # statistical-mechanics
 
-> **Molecular dynamics: MIPT coursework, March–April 2023, reorganised 2026.**
-> **Ising model: written 2026.** Full detail under [Provenance](#provenance).
+> **Molecular dynamics: MIPT, March–April 2023 · reorganised 2026.**
+> **Ising model: written 2026.** Per-component origins under [Provenance](#provenance).
 
 Two simulations of interacting many-body systems in C++20, each checked against
 something outside itself rather than inspected by eye:
@@ -12,8 +12,8 @@ something outside itself rather than inspected by eye:
 Both are parallelised with OpenMP, both take their parameters from the command
 line, and both write CSV that the included scripts turn into the figures below.
 
-The molecular dynamics engine began as coursework at MIPT (Applied Mathematics
-and Physics) in spring 2023 and is reorganised here with a portable build, a
+The molecular dynamics engine was written at MIPT (Applied Mathematics and
+Physics) in spring 2023 and is reorganised here with a portable build, a
 corrected integrator, and the verification made explicit. The Ising model is
 new — see [Provenance](#provenance).
 
@@ -119,8 +119,8 @@ the Binder crossing does not move.
 | `md-lennard-jones/` | [`bagantsova/supercomputers`](https://github.com/bagantsova/supercomputers) (archived), `files/` | 1 March – 19 April 2023 |
 | `ising/` | written for this repository | September 2026 |
 
-The MD code is the `supercomputers` repository from the MIPT supercomputing
-course, reorganised rather than rewritten from nothing: the structure, the FCC
+The MD code is the `supercomputers` repository, written at MIPT in 2023 and
+reorganised here rather than rewritten from nothing: the structure, the FCC
 initialisation, the minimum-image convention and the LAMMPS dump format are all
 from the 2023 original, which remains public and archived so its commit history
 is verifiable. What changed is listed under
