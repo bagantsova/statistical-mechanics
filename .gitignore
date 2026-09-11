@@ -1,0 +1,10 @@
+build/
+cmake-build-*/
+results/
+*.lammpstrj
+*.o
+*.out
+.DS_Store
+.idea/
+.vscode/
+compile_commands.json
